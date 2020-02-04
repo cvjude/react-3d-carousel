@@ -45,9 +45,8 @@ class Carousel extends Component {
     for (let i = 0; i < n; i++) {
       // children[i].style.padding = `${gap}px`;
       children[i].style.width = `${childWidth}px`;
-    
     }
-    for (i = 1; i < n; i++) {
+    for (let i = 1; i < n; i++) {
       children[i].style.width = `${childWidth}px`;
       children[i].style.transformOrigin = `50% 50% ${-apothem}px`;
       children[i].style.transform = `rotateY(${i * theta}rad)`;

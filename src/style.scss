@@ -68,9 +68,15 @@
 
 .sc_btn.left {
   left: 5%;
+  @include mobile {
+    left: 2%;
+  }
 }
 .sc_btn.right {
   right: 5%;
+  @include mobile {
+    left: 2%;
+  }
 }
 .flex-row {
   display: flex;
