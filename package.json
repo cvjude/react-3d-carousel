@@ -1,6 +1,6 @@
 {
   "name": "react-3d-carousel-container",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React 3d carousel",
   "main": "dist/index.js",
   "scripts": {

@@ -21,7 +21,7 @@
   align-items: center;
 
   @include mobile {
-    perspective: 0;
+    perspective: initial;
   }
 
   > * {
@@ -75,7 +75,7 @@
 .sc_btn.right {
   right: 5%;
   @include mobile {
-    left: 2%;
+    right: 2%;
   }
 }
 .flex-row {
