@@ -40,10 +40,12 @@ class Carousel extends Component {
 
     this.figureRef.current.style.transformOrigin = `50% 50% ${-apothem}px`;
     this.figureRef.current.style.width = `${childWidth}px`;
+    children[0].style.transform = `rotateY(0rad)`;
 
-    for (var i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
       // children[i].style.padding = `${gap}px`;
       children[i].style.width = `${childWidth}px`;
+    
     }
     for (i = 1; i < n; i++) {
       children[i].style.width = `${childWidth}px`;

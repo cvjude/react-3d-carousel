@@ -1,5 +1,5 @@
 @mixin mobile {
-  @media (max-width: #{550px}) {
+  @media (max-width: #{600px}) {
     @content;
   }
 }
@@ -19,6 +19,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mobile {
+    perspective: 0;
+  }
+
   > * {
     flex: 0 0 auto;
   }
@@ -37,6 +42,10 @@
         position: absolute;
         left: 0;
         top: 0;
+      }
+
+      @include mobile {
+        backface-visibility: hidden;
       }
     }
   }
