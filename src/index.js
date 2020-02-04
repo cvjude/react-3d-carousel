@@ -52,7 +52,8 @@ class Carousel extends Component {
       children[i].style.transform = `rotateY(${i * theta}rad)`;
     }
     if (this.props.bfc)
-      for (i = 0; i < n; i++) children[i].style.backfaceVisibility = 'hidden';
+      for (let i = 0; i < n; i++)
+        children[i].style.backfaceVisibility = 'hidden';
 
     this.rotateCarousel(this.state.currImage);
   };
