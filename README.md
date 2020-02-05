@@ -1,7 +1,5 @@
 # React 3d carousel
 
-==============
-
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][downloads-url]
 
@@ -12,10 +10,10 @@ Demo is available [here](http://)
 
 ```
 // with npm
-$ npm install react-3d-carousel  --save
+$ npm install react-3d-carousel-container  --save
 
 // with yarn
-$ yarn add react-3d-carousel
+$ yarn add react-3d-carousel-container
 ```
 
 ### Usage
@@ -27,7 +25,7 @@ The components or Html tags should have equal width, for expected behaviour,
 Add your padding on the components too.
 
 ```Javascript
-import Carousel from 'react-3d-carousel';
+import Carousel from 'react-3d-carousel-container';
 <Carousel bfc={false} >
   <div style={{ width: '500px', padding: '30px' }}>
     <img
