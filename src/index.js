@@ -19,9 +19,10 @@ class Carousel extends Component {
     this.setState({ width });
 
     this.setupCarousel(children.length, width);
-    window.addEventListener('resize', () => {
-      this.setupCarousel(children.length, width);
-    });
+    window.addEventListener(
+      'resize',
+      this.setupCarousel(children.length, width)
+    );
   }
   componentWillUnmount() {
     const children = this.props.children;

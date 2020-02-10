@@ -1,6 +1,6 @@
 {
   "name": "react-3d-carousel-container",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React 3d carousel that not only takes images but takes divs with your coustom styles",
   "main": "dist/index.js",
   "scripts": {
