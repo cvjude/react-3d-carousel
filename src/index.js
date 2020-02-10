@@ -10,7 +10,8 @@ class Carousel extends Component {
   state = {
     currImage: 0,
     theta: 0,
-    width: 0
+    width: 0,
+    event
   };
 
   componentDidMount() {
@@ -18,18 +19,15 @@ class Carousel extends Component {
     const width = parseFloat(getComputedStyle(this.childRef[0]).width);
     this.setState({ width });
 
-    this.setupCarousel(children.length, width);
+    const event = this.setupCarousel(children.length, width);
+    this.setState(event);
     window.addEventListener(
       'resize',
-      this.setupCarousel(children.length, width)
+      this.setupCarousel(children.length, event)
     );
   }
   componentWillUnmount() {
-    const children = this.props.children;
-    window.removeEventListener(
-      'resize',
-      this.setupCarousel(children.length, this.state.width)
-    );
+    window.removeEventListener('resize', this.state.event);
   }
 
   setupCarousel = (n, childWidth) => {
