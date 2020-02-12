@@ -21,11 +21,9 @@ class Carousel extends Component {
 
     const event = this.setupCarousel(children.length, width);
     this.setState(event);
-    window.addEventListener(
-      'resize',
-      this.setupCarousel(children.length, event)
-    );
+    window.addEventListener('resize', event);
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.state.event);
   }
