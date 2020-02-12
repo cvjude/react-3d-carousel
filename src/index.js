@@ -15,11 +15,10 @@ class Carousel extends Component {
   };
 
   componentDidMount() {
-    const children = this.props.children;
     const width = parseFloat(getComputedStyle(this.childRef[0]).width);
     this.setState({ width });
 
-    const event = this.setupCarousel(children.length, width);
+    const event = this.setupCarousel();
     this.setState(event);
     window.addEventListener('resize', event);
   }
@@ -28,7 +27,10 @@ class Carousel extends Component {
     window.removeEventListener('resize', this.state.event);
   }
 
-  setupCarousel = (n, childWidth) => {
+  setupCarousel = () => {
+    const n = this.props.children.length;
+    const childWidth = parseFloat(getComputedStyle(this.childRef[0]).width);
+
     const children = this.childRef;
     const apothem = childWidth / (2 * Math.tan(Math.PI / n));
     const theta = (2 * Math.PI) / n;
