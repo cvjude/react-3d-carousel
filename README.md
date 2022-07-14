@@ -1,8 +1,5 @@
 # React 3d carousel
 
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][downloads-url]
-
 Simple Dropdown component for React, inspired by [Giulio Mainardi](https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/)
 Demo is available [here](http://)
 
