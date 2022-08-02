@@ -25,30 +25,61 @@ yarn add react-3d-carousel-container
 ```Javascript
 import Carousel from 'react-3d-carousel-container';
 
-<Carousel bfc={false} >
-  <div style={{ width: '500px', padding: '30px' }}>
-    <img
-      className='img'
-      src='https://source.unsplash.com/nvzvOPQW0gc/800x533'
-      alt=''
-    />
-  </div>
-  <div style={{ width: '500px', padding: '30px' }}>
-    <img
-      className='img'
-      src='https://source.unsplash.com/7mUXaBBrhoA/800x533'
-      alt=''
-    />
-  </div>
-  <div style={{ width: '500px', padding: '30px' }}>
-    <img
-      className='img'
-      src='https://source.unsplash.com/7mUXaBBrhoA/800x533'
-      alt=''
-    />
-  </div>
-</Carousel>
+  <Carousel bfc={false}>
+    <div style={{ width: '450px', padding: '30px' }}>
+      <img
+        className="img"
+        src="https://source.unsplash.com/nvzvOPQW0gc/500x500"
+        alt=""
+        style={{ display: 'block', width: '100%' }}
+      />
+    </div>
+
+    <div style={{ width: '450px', padding: '30px' }}>
+      <img
+        className="img"
+        src="https://source.unsplash.com/lFmuWU0tv4M/500x500"
+        alt=""
+        style={{ display: 'block', width: '100%' }}
+      />
+    </div>
+
+    <div style={{ width: '450px', padding: '30px' }}>
+      <img
+        className="img"
+        src="https://source.unsplash.com/aJYO8JmVodY/500x500"
+        alt=""
+        style={{ display: 'block', width: '100%' }}
+      />
+    </div>
+
+    <div style={{ width: '450px', padding: '30px' }}>
+      <img
+        className="img"
+        src="https://source.unsplash.com/aJYO8JmVodY/500x500"
+        alt=""
+        style={{ display: 'block', width: '100%' }}
+      />
+    </div>
+
+    <div style={{ width: '450px', padding: '30px' }}>
+      <img
+        className="img"
+        src="https://source.unsplash.com/aJYO8JmVodY/500x500"
+        alt=""
+        style={{ display: 'block', width: '100%' }}
+      />
+    </div>
+  </Carousel>
 ```
+
+## Props
+
+| Prop        |              description               | default |
+| ----------- | :------------------------------------: | ------: |
+| bfc         | allows you view the back of the images |   false |
+| perspective |            user perpective             |    1000 |
+| arrowClass  |   pass custom classes to the arrows    |      '' |
 
 ## Author
 

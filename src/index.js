@@ -11,7 +11,7 @@ class Carousel extends Component {
     currImage: 0,
     theta: 0,
     width: 0,
-    event
+    event,
   };
 
   componentDidMount() {
@@ -57,19 +57,20 @@ class Carousel extends Component {
     this.rotateCarousel(this.state.currImage);
   };
 
-  rotateCarousel = imageIndex => {
-    this.figureRef.current.style.transform = `rotateY(${imageIndex *
-      -this.state.theta}rad)`;
+  rotateCarousel = (imageIndex) => {
+    this.figureRef.current.style.transform = `rotateY(${
+      imageIndex * -this.state.theta
+    }rad)`;
   };
 
-  handleScroll = position => {
+  handleScroll = (position) => {
     if (position === 'left') {
-      this.setState(prevState => ({
-        currImage: prevState.currImage - 1
+      this.setState((prevState) => ({
+        currImage: prevState.currImage - 1,
       }));
     } else {
-      this.setState(prevState => ({
-        currImage: prevState.currImage + 1
+      this.setState((prevState) => ({
+        currImage: prevState.currImage + 1,
       }));
     }
     this.rotateCarousel(this.state.currImage);
@@ -78,10 +79,13 @@ class Carousel extends Component {
   render() {
     const arrowClass = this.props.arrowClass;
     return (
-      <div className='react_3d_carousel'>
+      <div
+        className="react_3d_carousel"
+        style={{ perspective: this.props.perspective }}
+      >
         <button
           className={`sc_btn left flex-row ${arrowClass}`}
-          onClick={e => this.handleScroll('left')}
+          onClick={(e) => this.handleScroll('left')}
         >
           <LeftArrow />
         </button>
@@ -89,8 +93,8 @@ class Carousel extends Component {
           {this.props.children.map((child, index) => (
             <div
               key={`react_carousel_${index}`}
-              className='rc_child'
-              ref={ref => {
+              className="rc_child"
+              ref={(ref) => {
                 this.childRef[index] = ref;
                 return true;
               }}
@@ -101,7 +105,7 @@ class Carousel extends Component {
         </figure>
         <button
           className={`sc_btn right flex-row ${arrowClass}`}
-          onClick={e => this.handleScroll('right')}
+          onClick={(e) => this.handleScroll('right')}
         >
           <RightArrow />
         </button>
@@ -113,12 +117,14 @@ class Carousel extends Component {
 Carousel.propTypes = {
   bfc: PropTypes.bool,
   children: PropTypes.element.isRequired,
-  arrowClass: PropTypes.string
+  arrowClass: PropTypes.string,
+  perspective: PropTypes.number,
 };
 
 Carousel.defaultProps = {
   bfc: false,
-  arrowClass: ''
+  arrowClass: '',
+  perspective: 1000,
 };
 
 export default Carousel;
