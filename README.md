@@ -1,28 +1,30 @@
-# React 3d carousel
+# React 3d carousel 👋
 
-Simple Dropdown component for React, inspired by [Giulio Mainardi](https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/)
-Demo is available [here](http://)
+![Version](https://img.shields.io/badge/node->6.0.0-blue.svg?cacheSeconds=2592000) ![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
-### Installation
+> Simple Dropdown component for React, inspired by [Giulio Mainardi](https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/)
+> Demo is available [here](https://react-ed-carousel.herokuapp.com/)
+
+### 🏠 [Homepage](https://github.com/cvjude/react-3d-carousel/tree/main)
+
+## Prerequisites
+
+- Node >= 6.0.0
+- React >= 10.0.0
+
+## Install
 
 ```
-// with npm
-$ npm install react-3d-carousel-container  --save
+npm install --save-dev react-3d-carousel-container
 
-// with yarn
-$ yarn add react-3d-carousel-container
+yarn add react-3d-carousel-container
 ```
 
-### Usage
-
-This is the basic usage of carousel
-The Carousel supports your own elements, in their own containers,
-Just add the style and pass as so
-The components or Html tags should have equal width, for expected behaviour,
-Add your padding on the components too.
+## Usage
 
 ```Javascript
 import Carousel from 'react-3d-carousel-container';
+
 <Carousel bfc={false} >
   <div style={{ width: '500px', padding: '30px' }}>
     <img
@@ -46,24 +48,17 @@ import Carousel from 'react-3d-carousel-container';
     />
   </div>
 </Carousel>
-
 ```
 
-### props
+## Author
 
-| Props      | description                                                    | default |
-| ---------- | -------------------------------------------------------------- | ------- |
-| bfc        | if true determines if you the elements at the back are visible | false   |
-| arrowClass | class passed to the arrows to style them                       | ""      |
+👤 **Chinoso Jude**
 
-### Customizing the dropdown
+## 🤝 Contributing
 
-**Run example**
+Contributions, issues and feature requests are welcome!
+Create a pull request and it will be reviewed and merged
 
-```
-$ npm start
-```
+## Show your support
 
-### License
-
-MIT
+Give a ⭐️ if this project helped you!

@@ -1,6 +1,6 @@
 {
   "name": "react-3d-carousel-container",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React 3d carousel that not only takes images but takes divs with your coustom styles",
   "main": "dist/index.js",
   "scripts": {
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/cvjude/react-3d-carousel#readme",
   "dependencies": {
-    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "sass": "^1.54.0",
     "webpack": "^4.41.2"
   },
   "devDependencies": {
